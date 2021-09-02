@@ -1,6 +1,6 @@
--- První mezitabulka, podmínky u populace a iso3 jsou kvùli tomu,
--- e nìkteré státy se jmenují jinak v rùznıch tabulkách, proto je chci napasovat
--- Tento select prochází hodnì dlouho
+-- PrvnÃ­ mezitabulka, podmÃ­nky u populace a iso3 jsou kvuli tomu,
+-- Å¾e nÄ›kterÃ© stÃ¡ty se jmenujÃ­ jinak v rÃ¹znÃ½ch tabulkÃ¡ch, proto je chci napasovat
+-- Tento select prochÃ¡zÃ­ hodnÄ› dlouho
 
 CREATE TABLE t_base_time_variable AS (
 SELECT 
@@ -33,8 +33,8 @@ ORDER BY country);
 SELECT DISTINCT entity FROM `data`.covid19_tests ORDER BY entity ;
 
 
--- Nìkteré státy mìly u provedenıch testù více údajù pro jeden den, chceme se tìchto "duplicit" zbavit
--- Pøednostnì budu brát údaje - entity podle abecedy (SELECT DISTINCT entity FROM `data`.covid19_tests ORDER BY entity ;)
+-- NÄ›kterÃ© stÃ¡ty mÄ›ly u provedenÃ½ch testÅ¯ vÃ­ce ÃºdajÅ¯ pro jeden den, chceme se tÄ›chto "duplicit" zbavit
+-- PÅ™ednostnÃ¬ budu brÃ¡t Ãºdaje - entity podle abecedy (SELECT DISTINCT entity FROM `data`.covid19_tests ORDER BY entity ;)
 
 CREATE TABLE t_base_without_dupl_tests AS (
 WITH base AS (
@@ -55,7 +55,7 @@ FROM base
 WHERE base.rnk = 1);
 
 -- Mezitabulky pro HDP, GINI a children_mortality
--- Pokud zemì nemá údaj z roku 2020, vezmu ten nejnovìjší od roku 2010 (pokud nìjakı je)
+-- Pokud zemÄ› nemÃ¡ Ãºdaj z roku 2020, vezmu ten nejnovÄ›jÅ¡Ã­ od roku 2010 (pokud nÄ›jakÃ½ je)
 
 -- HDP na obyvatele 
 
@@ -75,7 +75,7 @@ SELECT
 FROM base 
 JOIN countries c ON base.country = c.country);
 
-SELECT * FROM t_GDP_per_capita;
+
 -- GINI
 
 CREATE TABLE t_gini AS (
@@ -112,7 +112,7 @@ SELECT
 FROM base
 JOIN countries c ON base.country = c.country);
 
--- Náboenství - otázka - mám tam dávat všechna náboenství nebo staèí jenom ta nejèastìjší? 
+-- NÃ¡boÅ¾enstvÃ­ - otÃ¡zka - mÃ¡m tam dÃ¡vat vÅ¡echna nÃ¡boÅ¾enstvÃ­ nebo staÄÃ­ jenom ta nejÄastÄ›jÅ¡Ã­? 
 
 CREATE TABLE t_religions AS (
 WITH base AS (
@@ -151,8 +151,8 @@ LEFT JOIN lookup_table lt ON base.country = TRIM(TRAILING '*' FROM lt.country) A
 LEFT JOIN countries c ON base.country = c.country OR lt.iso3 = c.iso3)
 ;
 
--- poèasí 
--- pouití NULLIF - zmìní 0 na NULL a count ignoruje NULL 
+-- poÄasÃ­ 
+-- pouÅ¾itÃ­ NULLIF - zmÄ›nÃ­ 0 na NULL a count ignoruje NULL 
 CREATE TABLE t_raining_hours AS (
 WITH base AS (
 SELECT 
@@ -171,7 +171,7 @@ SELECT
 FROM base
 GROUP BY date, city);
 
--- gust síla vìtru v nárazech
+-- gust sÃ­la vÄ›tru v nÃ¡razech
 CREATE TABLE t_max_daily_gust AS (
 WITH base AS (
 SELECT 
@@ -188,14 +188,14 @@ FROM base
 WHERE city IS NOT NULL
 GROUP BY date, city);
 
--- prùmìrná denní teplota - den od 06:00 do 18:00
+-- prÅ¯mÄ›rnÃ¡ dennÃ­ teplota - den od 06:00 do 18:00
 
 CREATE TABLE t_daily_temp AS (
 WITH base AS (
 SELECT 
 	CAST(date AS date) AS date,
 	city,
-	TRIM(TRAILING ' °c' FROM temp) AS temperature
+	TRIM(TRAILING ' Â°c' FROM temp) AS temperature
 FROM weather
 WHERE time IN ('06:00', '09:00', '12:00', '15:00', '18:00')
 AND city IS NOT NULL)
@@ -206,7 +206,7 @@ SELECT
 FROM base
 GROUP BY date, city);
 
--- poèasí dohromady 
+-- poÄasÃ­ dohromady 
 
 CREATE TABLE t_weather AS (
 SELECT 
@@ -218,7 +218,7 @@ LEFT JOIN t_max_daily_gust tmdg ON dt.date = tmdg.date AND dt.city = tmdg.city
 LEFT JOIN t_raining_hours rh ON dt.date = rh.date AND dt.city = rh.city
 ORDER BY date);
 
--- poèasí k mìstu pøiøazuji stát, pouívám tabulku cities - je to dobøe? 
+-- poÄasÃ­ k mÃ­stu pÅ™iÅ™azuji stÃ¡t, pouÅ¾Ã­vÃ¡m tabulku cities - nevadÃ­ to? 
 
 CREATE TABLE t_weather_with_country_2 AS (
 SELECT
@@ -231,7 +231,7 @@ SELECT
 FROM t_weather base 
 LEFT JOIN cities c ON base.city = c.city AND c.capital = 'primary');
 
--- k základní tabulce pøidávám poèasí
+-- k zÃ¡kladnÃ­ tabulce pÅ™idÃ¡vÃ¡m poÄasÃ­
 
 CREATE TABLE t_base_with_weather AS (
 SELECT 
@@ -243,7 +243,7 @@ FROM t_base_without_dupl_tests base
 LEFT JOIN t_weather_with_country_2 t ON base.date = t.date AND (base.country = t.country OR base.iso3 = t.iso3)
 ORDER BY date);
 
--- Pøidání hustoty obyvatel a mediánu
+-- PÅ™idÃ¡nÃ­ hustoty obyvatel a mediÃ¡nu
 
 CREATE TABLE t_base_add1 AS (
 SELECT 
@@ -254,7 +254,7 @@ FROM t_base_with_weather t
 LEFT JOIN countries c ON t.iso3 = c.iso3 OR t.country = c.country
 ORDER BY date);
 
--- koneèná tabulka
+-- koneÄnÃ¡ tabulka
 
 CREATE TABLE t_michaela_muronova_projekt_SQL_final AS (
 SELECT 
