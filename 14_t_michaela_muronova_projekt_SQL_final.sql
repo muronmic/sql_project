@@ -1,8 +1,9 @@
--- koneèná tabulka
+-- koneÄnÃ¡ tabulka
 
--- Pouívám LEFT JOIN ke spojení tabulek dohromady, spojuji pomocí iso3, které jsem si v tabulkách naschvál nechávala po celou dobu,
--- pro pøípad, e by údaj s iso3 v tabulce nebyl, pøidávám monost spojit tabulky i pomocí názvu country.
--- Zaokrouhluji údaje o hustotì obyvatel a rozdílu doití na dvì desetinná místa.
+-- PouÅ¾Ã­vÃ¡m LEFT JOIN ke spojenÃ­ tabulek dohromady, spojuji pomocÃ­ iso3, kterÃ© jsem si v tabulkÃ¡ch naschvÃ¡l nechÃ¡vala po celou dobu,
+-- pro pÅ™Ã­pad, Å¾e by Ãºdaj s iso3 v tabulce nebyl, pÅ™idÃ¡vÃ¡m moÅ¾nost spojit tabulky i pomocÃ­ nÃ¡zvu country.
+-- Zaokrouhluji Ãºdaje o hustotÄ› obyvatel a rozdÃ­lu doÅ¾itÃ­ na dvÄ› desetinnÃ¡ mÃ­sta.
+-- Tabulka se vytvoÅ™Ã­ na databÃ¡zi od engeto za 1.5 minuty.
 
 CREATE TABLE t_michaela_muronova_projekt_SQL_final AS (
 SELECT 
