@@ -1,5 +1,5 @@
--- gust síla vìtru v nárazech
--- Opìt pouívám funkci TRIM a CAST. 
+-- gust sÃ­la vÄ›tru v nÃ¡razech
+-- OpÄ›t pouÅ¾Ã­vÃ¡m funkci TRIM a CAST. 
 
 CREATE TABLE t_max_daily_gust AS (
 WITH base AS (
