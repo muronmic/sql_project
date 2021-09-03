@@ -1,5 +1,5 @@
 -- Mezitabulka pro HDP na obyvatele
--- Pokud zemì nemá údaj z roku 2020, vezmu ten nejnovìjší od roku 2010 (pokud nìjakı je)
+-- Pokud zemÄ› nemÃ¡ Ãºdaj z roku 2020, vezmu ten nejnovÄ›jÅ¡Ã­ od roku 2010 (pokud nÄ›jakÃ½ je)
 
 
 CREATE TABLE t_GDP_per_capita AS (
