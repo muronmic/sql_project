@@ -1,4 +1,5 @@
--- K z�kladn� tabulce t_base_without_dupl_tests p�id�v�m informace s po�as�m
+-- K základní tabulce t_base_without_dupl_tests přidávám informace s počasím
+-- Tento SELECT opět prochází delší dobu - na databázi od engeto se tabulka vytvořila za 10 minut (na localhostu za 2.5 minuty).
 
 CREATE TABLE t_base_with_weather AS (
 SELECT 
