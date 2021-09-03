@@ -1,12 +1,12 @@
--- První mezitabulka, ukazuje èasové promìnné - pomocí CASE WHEN ukazuje, zda se jedná o víkend nebo ne.
--- Funkci CASE WHEN pouívám i pro zobrazení roèního období (jaro - 0, léto - 1 atd.)
--- CASE WHEN je pouito i pro populaci a to kvùli tomu, e v kadé tabulce se státy jmenují jinak a tímto zpùsobem napasujeme všechny.
--- Sloupec iso3 pouívám, abychom mìli sloupec, kterı se narozdíl od jmen státù v tabulkách neliší, tento sloupec budeme
--- pozdìji pouívat pro spojování tabulek.
+-- PrvnÃ­ mezitabulka, ukazuje ÄasovÃ© promÄ›nnÃ© - pomocÃ­ CASE WHEN ukazuje, zda se jednÃ¡ o vÃ­kend nebo ne.
+-- Funkci CASE WHEN pouÅ¾Ã­vÃ¡m i pro zobrazenÃ­ roÄnÃ­ho obdobÃ­ (jaro - 0, lÃ©to - 1 atd.)
+-- CASE WHEN je pouÅ¾ito i pro populaci a to kvÅ¯li tomu, Å¾e v kaÅ¾dÃ© tabulce se stÃ¡ty jmenujÃ­ jinak a tÃ­mto zpÅ¯sobem napasujeme vÅ¡echny.
+-- Sloupec iso3 pouÅ¾Ã­vÃ¡m, abychom mÄ›li sloupec, kterÃ½ se narozdÃ­l od jmen stÃ¡tÅ¯ v tabulkÃ¡ch neliÅ¡Ã­, tento sloupec budeme
+-- pozdÄ›ji pouÅ¾Ã­vat pro spojovÃ¡nÃ­ tabulek.
 
 
--- !! Tento SELECT prochází na databázi od engeto 16-17 minut
--- Na mém localhostu se tabulka vytvoøila za 5-6 minut.
+-- !! Tento SELECT prochÃ¡zÃ­ na databÃ¡zi od engeto 16-17 minut
+-- Na mÃ©m localhostu se tabulka vytvoÅ™ila za 5-6 minut.
 
 CREATE TABLE t_base_time_variable AS (
 SELECT 
