@@ -1,5 +1,5 @@
--- Poèasí spojené dohromady 
--- Tento SELECT prochází za cca 3 minuty na databázi od engeto (opìt na localhostu rychleji a to do 1 minuty)
+-- PoÄasÃ­ spojenÃ© dohromady 
+-- Tento SELECT prochÃ¡zÃ­ za cca 3 minuty na databÃ¡zi od engeto (opÄ›t na localhostu rychleji a to do 1 minuty)
 
 CREATE TABLE t_weather AS (
 SELECT 
