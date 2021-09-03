@@ -1,7 +1,7 @@
--- Náboenství
--- Pouila jsem LEFT JOIN s lookup_table a tabulkou countries a to kvùli iso3 - iso3 pouívám, protoe 
--- nìkteré státy se rùznì jmenují v rùznıch tabulkách, ale iso3 zùstává stejné
--- Funkci TRIM pouívám, protoe se u nìkterıch státù (Thaiwan) vyskytuje * pøed jménem státu. 
+-- NÃ¡boÅ¾enstvÃ­
+-- PouÅ¾ila jsem LEFT JOIN s lookup_table a tabulkou countries a to kvÅ¯li iso3 - iso3 pouÅ¾Ã­vÃ¡m, protoÅ¾e 
+-- nÄ›kterÃ© stÃ¡ty se rÅ¯znÄ› jmenujÃ­ v rÅ¯znÃ½ch tabulkÃ¡ch, ale iso3 zÅ¯stÃ¡vÃ¡ stejnÃ©
+-- Funkci TRIM pouÅ¾Ã­vÃ¡m, protoÅ¾e se u nÄ›kterÃ½ch stÃ¡tÃ¹ (Thaiwan) vyskytuje * pÅ™ed jmÃ©nem stÃ¡tu. 
 
 CREATE TABLE t_religions AS (
 WITH base AS (
