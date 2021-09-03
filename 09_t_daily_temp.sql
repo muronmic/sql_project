@@ -1,13 +1,13 @@
--- prùmìrná denní teplota - den od 06:00 do 18:00
+-- prÅ¯mÄ›rnÃ¡ dennÃ­ teplota - den od 06:00 do 18:00
 
--- Opìt funkce TRIM
+-- OpÄ›t funkce TRIM
 
 CREATE TABLE t_daily_temp AS (
 WITH base AS (
 SELECT 
 	CAST(date AS date) AS date,
 	city,
-	TRIM(TRAILING ' °c' FROM temp) AS temperature
+	TRIM(TRAILING ' Â°c' FROM temp) AS temperature
 FROM weather
 WHERE time IN ('06:00', '09:00', '12:00', '15:00', '18:00')
 AND city IS NOT NULL)
