@@ -1,5 +1,5 @@
 -- GINI
--- Pokud zemì nemá údaj z roku 2020, vezmu ten nejnovìjší od roku 2010 (pokud nìjaký je)
+-- Pokud zemÄ› nemÃ¡ Ãºdaj z roku 2020, vezmu ten nejnovÄ›jÅ¡Ã­ od roku 2010 (pokud nÄ›jakÃ½ je)
 
 CREATE TABLE t_gini AS (
 WITH base AS (
@@ -13,6 +13,7 @@ AND year >= 2010
 GROUP BY country)
 SELECT 
 	c.iso3,
+	base.country,
 	gini
 FROM base
 JOIN countries c ON c.country = base.country);
