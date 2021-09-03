@@ -12,7 +12,8 @@ WHERE mortaliy_under5 IS NOT NULL
 AND year >= 2010
 GROUP BY country) 
 SELECT 
-	c.iso3, 
+	c.iso3,
+	base.country,
 	base.children_mortality
 FROM base
 JOIN countries c ON base.country = c.country);
