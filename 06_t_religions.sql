@@ -1,7 +1,7 @@
 -- Náboženství
 -- Použila jsem LEFT JOIN s lookup_table a tabulkou countries a to kvůli iso3 - iso3 používám, protože 
 -- některé státy se různě jmenují v různých tabulkách, ale iso3 zůstává stejné
--- Funkci TRIM používám, protože se u některých státù (Thaiwan) vyskytuje * před jménem státu. 
+-- Funkci TRIM používám, protože se u některých států (Thaiwan) vyskytuje * před jménem státu. 
 
 CREATE TABLE t_religions AS (
 WITH base AS (
