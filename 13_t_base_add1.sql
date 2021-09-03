@@ -1,4 +1,4 @@
--- Pøidání hustoty obyvatel a mediánu
+-- PÅ™idÃ¡nÃ­ hustoty obyvatel a mediÃ¡nu
 
 CREATE TABLE t_base_add1 AS (
 SELECT 
