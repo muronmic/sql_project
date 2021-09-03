@@ -14,6 +14,7 @@ AND year >= 2010
 GROUP BY country)
 SELECT 
 	c.iso3,
+	base.country,
 	ROUND(GDP / c.population, 2) AS GDP_per_capita
 FROM base 
 JOIN countries c ON base.country = c.country);
