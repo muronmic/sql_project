@@ -1,6 +1,6 @@
--- Nìkteré státy (napø. Polsko) mìly u provedenıch testù více údajù pro jeden den 
--- (napøíklad poèet provedenıch testù pro entity people tested a entity units unclear), chceme se tìchto "duplicit" zbavit
--- Pøednostnì budu brát údaje - entity podle abecedy (tzn. people tested mají pøednost pøed samples tested atd.)
+-- NÄ›kterÃ© stÃ¡ty (napÅ™. Polsko) mÄ›ly u provedenÃ½ch testÅ¯ vÃ­ce ÃºdajÅ¯ pro jeden den 
+-- (napÅ™Ã­klad poÄet provedenÃ½ch testÅ¯ pro entity people tested a entity units unclear), chceme se tÄ›chto "duplicit" zbavit
+-- PÅ™ednostnÄ› budu brÃ¡t Ãºdaje - entity podle abecedy (tzn. people tested majÃ­ pÅ™ednost pÅ™ed samples tested atd.)
 -- people tested
 -- people tested (incl. non-PCR)
 -- samples tested
