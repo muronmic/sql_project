@@ -1,4 +1,4 @@
--- doba doûitÌ 2015 - 1965
+-- doba do≈æit√≠ 2015 - 1965
 
 CREATE TABLE t_life_expectancy_difference AS (
 SELECT 
