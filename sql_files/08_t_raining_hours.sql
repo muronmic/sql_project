@@ -1,4 +1,4 @@
--- Poèasí, poèet hodin, kdy pršelo
+-- Počasí, počet hodin, kdy pršelo
 
 -- Použití funkce TRIM - bez odstranění mm bych dostávala warnings, které by mi bránily ve vytvoření tabulky. 
 -- Použití funkce CAST - chci, aby databáze pracovala s údajem jako s číslem, což budu potřebovat ve výpočtu níž. 
