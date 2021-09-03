@@ -1,9 +1,9 @@
--- Poèasí, poèet hodin, kdy pršelo
+-- PoÃ¨asÃ­, poÃ¨et hodin, kdy prÅ¡elo
 
--- Pouití funkce TRIM - bez odstranìní mm bych dostávala warnings, které by mi bránily ve vytvoøení tabulky. 
--- Pouití funkce CAST - chci, aby databáze pracovala s údajem jako s èíslem, co budu potøebovat ve vıpoètu ní. 
--- Ve vıpoètu násobím 3, protoe uvedené èasové intervaly mají 3 hodiny. 
--- Pouití NULLIF - zmìní 0 na NULL a count ignoruje NULL, tím pádem mùu poèítat pouze s nenulovımi srákami.
+-- PouÅ¾itÃ­ funkce TRIM - bez odstranÄ›nÃ­ mm bych dostÃ¡vala warnings, kterÃ© by mi brÃ¡nily ve vytvoÅ™enÃ­ tabulky. 
+-- PouÅ¾itÃ­ funkce CAST - chci, aby databÃ¡ze pracovala s Ãºdajem jako s ÄÃ­slem, coÅ¾ budu potÅ™ebovat ve vÃ½poÄtu nÃ­Å¾. 
+-- Ve vÃ½poÄtu nÃ¡sobÃ­m 3, protoÅ¾e uvedenÃ© ÄasovÃ© intervaly majÃ­ 3 hodiny. 
+-- PouÅ¾itÃ­ NULLIF - zmÄ›nÃ­ 0 na NULL a count ignoruje NULL, tÃ­m pÃ¡dem mÃ¹Å¾u poÄÃ­tat pouze s nenulovÃ½mi srÃ¡Å¾kami.
 
 CREATE TABLE t_raining_hours AS (
 WITH base AS (
