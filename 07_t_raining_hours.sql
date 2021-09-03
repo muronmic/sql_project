@@ -3,7 +3,7 @@
 -- Použití funkce TRIM - bez odstranění mm bych dostávala warnings, které by mi bránily ve vytvoření tabulky. 
 -- Použití funkce CAST - chci, aby databáze pracovala s údajem jako s číslem, což budu potřebovat ve výpočtu níž. 
 -- Ve výpočtu násobím 3, protože uvedené časové intervaly mají 3 hodiny. 
--- Použití NULLIF - změní 0 na NULL a count ignoruje NULL, tím pádem mùžu počítat pouze s nenulovými srážkami.
+-- Použití NULLIF - změní 0 na NULL a count ignoruje NULL, tím pádem můžu počítat pouze s nenulovými srážkami.
 
 CREATE TABLE t_raining_hours AS (
 WITH base AS (
