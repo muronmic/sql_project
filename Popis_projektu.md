@@ -1,6 +1,6 @@
 ## SQL Projekt
 
-Normální text blablabla
+Zadáním projektu bylo vytvořit tabulku vycházející z tabulky covid19_basic_differences, která bude obsahovat informace o počtu nakažených lidí nemocí covid19 v různých zemích, o množství udělaných testů na covid19 a navíc časové proměnné, kulturní proměnné a v neposlední řadě také informace o počasí. Podrobné zadání naleznete ZDE.
 
 <details><summary>t_base_time_variable</summary>
 
