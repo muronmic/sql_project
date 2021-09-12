@@ -1,3 +1,3 @@
 # sql_project
 
-Prozatím je obsahem pouze sql soubor, kde je stručný komentář a kroky, které jsem použila, abych získala požadovanou tabulku.
+V tomto repozitáři naleznete vypracovaný SQL projekt se zadáním, postupem i s sql soubory, kde jsou příslušná query k vytvoření tabulek.
