@@ -1,4 +1,4 @@
--- Poèet nakaenıch a poèet provedenıch testù v zemi v nejteplejší den
+-- PoÄet nakaÅ¾enÃ½ch a poÄet provedenÃ½ch testÅ¯ v zemi v nejteplejÅ¡Ã­ den
 
 WITH base AS (
 SELECT
@@ -14,7 +14,7 @@ SELECT
 FROM base
 WHERE avg_daily_temp = max_temp;
 
--- Nejvìtší poèet nakaenıch pro kadou zemi + v jakı den to bylo 
+-- NejvÄ›tÅ¡Ã­ poÄet nakaÅ¾enÃ½ch pro kaÅ¾dou zemi + v jakÃ½ den to bylo 
 
 WITH base AS (
 SELECT
@@ -29,7 +29,7 @@ FROM base
 WHERE confirmed = base.max_confirmed
 ORDER BY nejvyssi_prirustek DESC;
 
--- Poèet nakaenıch a poèet provedenıch testù po dnech v zemích, kde je nejvíce køesanù (více ne 75 %)
+-- PoÄet nakaÅ¾enÃ½ch a poÄet provedenÃ½ch testÅ¯ po dnech v zemÃ­ch, kde je nejvÃ­ce kÅ™esÅ¥anÅ¯ (vÃ­ce neÅ¾ 75 %)
 
 SELECT 
 	date,
@@ -39,7 +39,7 @@ SELECT
 FROM t_michaela_muronova_projekt_sql_final 
 WHERE Christianity >= 75;
 
--- Nejvìtší denní nárùst nakaenıch v zemi pro kadé roèní období
+-- NejvÄ›tÅ¡Ã­ dennÃ­ nÃ¡rÅ¯st nakaÅ¾enÃ½ch v zemi pro kaÅ¾dÃ© roÄnÃ­ obdobÃ­
 
 WITH base AS (
 SELECT
@@ -54,7 +54,7 @@ SELECT
 FROM base
 WHERE confirmed = base.max_confirmed;
 
--- Prùbìh poètu nakaenıch a provedenıch testù pro zemì s nízkou hodnotou HDP na obyvatele
+-- PrÅ¯bÄ›h poÄtu nakaÅ¾enÃ½ch a provedenÃ½ch testÅ¯ pro zemÄ› s nÃ­zkou hodnotou HDP na obyvatele
 
 SELECT 
 	date,
@@ -64,7 +64,7 @@ SELECT
 FROM t_michaela_muronova_projekt_sql_final tmmpsf 
 WHERE GDP_per_capita < 1000;
 
--- Prùbìh poètu nakaenıch a provedenıch testù pro zemì s vysokım rozdílem doití v letech 1965 a 2015
+-- PrÅ¯bÄ›h poÄtu nakaÅ¾enÃ½ch a provedenÃ½ch testÅ¯ pro zemÄ› s vysokÃ½m rozdÃ­lem doÅ¾itÃ­ v letech 1965 a 2015
 
 SELECT 
 	date,
@@ -74,7 +74,7 @@ SELECT
 FROM t_michaela_muronova_projekt_sql_final tmmpsf 
 WHERE life_expectancy_difference > 25;
 
--- Prùbìh poètu nakaenıch a provedenıch testù pro zemì s vysokou hustotou zalidnìní (> 1000)
+-- PrÅ¯bÄ›h poÄtu nakaÅ¾enÃ½ch a provedenÃ½ch testÅ¯ pro zemÄ› s vysokou hustotou zalidnÄ›nÃ­ (> 1000)
 
 SELECT 
 	date,
